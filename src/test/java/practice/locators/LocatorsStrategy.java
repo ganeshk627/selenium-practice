@@ -15,6 +15,7 @@ public class LocatorsStrategy {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); //default implicit time 0
 
     /*
+    Common syntax for xpath
     //tagname[@attribute='value']
     */
 
