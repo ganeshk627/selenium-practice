@@ -5,25 +5,43 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.time.Duration;
 import java.util.List;
 
 public class LocatorsStrategy {
     public static void main(String [] args){
         WebDriver driver = new ChromeDriver();
         driver.get("https://opensource-demo.orangehrmlive.com/");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); //default implicit time 0
+
+    /*
+    //tagname[@attribute='value']
+    */
 
         // two methods to locate
         driver.findElement(By.xpath("//input"));
-        driver.findElements(By.xpath("//input"));
+//        driver.findElement(By.xpath("//input1"));
+        List<WebElement> inputs1 = driver.findElements(By.xpath("//input"));
+        List<WebElement> inputs2 = driver.findElements(By.xpath("//input1"));
+        System.out.println(inputs1.size());
+        System.out.println(inputs2.size());
 
-        //
-        driver.findElement(By.xpath(""));
-        driver.findElement(By.cssSelector(""));
-        driver.findElement(By.className(""));
-        driver.findElement(By.id(""));
-        driver.findElement(By.name(""));
-        driver.findElement(By.tagName(""));
-        driver.findElement(By.linkText(""));
-        driver.findElement(By.partialLinkText(""));
+        // locator methods
+
+/*
+            Xpath - 2 types
+            1. Absolute - /
+            2. Relative - //
+ */
+        driver.findElement(By.xpath("//button[normalize-space()='Login']"));
+        driver.findElement(By.cssSelector("button[type='submit']"));
+        driver.findElement(By.className("oxd-input oxd-input--active"));
+        driver.findElement(By.id("app"));
+        driver.findElement(By.name("username"));
+        driver.findElement(By.tagName("button"));
+        driver.findElement(By.linkText("OrangeHRM, Inc"));
+        driver.findElement(By.partialLinkText("OrangeHRM"));
+
+        driver.close();
     }
 }
