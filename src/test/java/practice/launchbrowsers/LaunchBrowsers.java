@@ -22,20 +22,20 @@ public class LaunchBrowsers {
             WebDriver driver = new ChromeDriver();
         } else if (browser.equals("firefox")) {
 //            https://github.com/mozilla/geckodriver/releases
-            System.setProperty("webdriver.gecko.driver", "");
+            System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
             WebDriver driver = new FirefoxDriver();
         }else if (browser.equals("ie")) {
 //            https://github.com/SeleniumHQ/selenium/releases/download/selenium-3.0.0/IEDriverServer_Win32_3.0.0.zip
 //            https://github.com/SeleniumHQ/selenium/releases/download/selenium-3.0.0/IEDriverServer_x64_3.0.0.zip
-            System.setProperty("webdriver.ie.driver", "");
+            System.setProperty("webdriver.ie.driver", "drivers/IEDriverServer");
             WebDriver driver = new InternetExplorerDriver();
         }else if (browser.equals("edge")) {
 //            https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads
-            System.setProperty("webdriver.edge.driver", "");
+            System.setProperty("webdriver.edge.driver", "drivers/msedgedriver");
             WebDriver driver = new EdgeDriver();
         }else if (browser.equals("opera")) {
 //            https://github.com/operasoftware/operachromiumdriver/releases
-            System.setProperty("webdriver.opera.driver", "");
+            System.setProperty("webdriver.opera.driver", "drivers/operadriver");
             WebDriver driver = new OperaDriver();
         }else if (browser.equals("safari")) {
 //            /usr/bin/safaridriver
