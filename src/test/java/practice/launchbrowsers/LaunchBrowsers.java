@@ -1,12 +1,12 @@
 package practice.launchbrowsers;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.opera.OperaDriver;
+//import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 public class LaunchBrowsers {
@@ -36,7 +36,7 @@ public class LaunchBrowsers {
         }else if (browser.equals("opera")) {
 //            https://github.com/operasoftware/operachromiumdriver/releases
             System.setProperty("webdriver.opera.driver", "drivers/operadriver");
-            WebDriver driver = new OperaDriver();
+//            WebDriver driver = new OperaDriver();
         }else if (browser.equals("safari")) {
 //            /usr/bin/safaridriver
 //            safaridriver --enable
@@ -46,26 +46,26 @@ public class LaunchBrowsers {
 
     public void launchBrowserWithWebdrivermanager(String browser){
 
-        if(browser.equalsIgnoreCase("chrome")){
-            WebDriverManager.chromedriver().setup();
-            WebDriver driver = new ChromeDriver();
-        } else if (browser.equals("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
-            WebDriver driver = new FirefoxDriver();
-        }else if (browser.equals("ie")) {
-            WebDriverManager.iedriver().setup();
-            WebDriver driver = new InternetExplorerDriver();
-        }else if (browser.equals("edge")) {
-            WebDriverManager.edgedriver().setup();
-            WebDriver driver = new EdgeDriver();
-        }else if (browser.equals("opera")) {
-            WebDriverManager.operadriver().setup();
-            WebDriver driver = new OperaDriver();
-        }else if (browser.equals("safari")) {
-//            /usr/bin/safaridriver
-//            safaridriver --enable
-            WebDriver driver = new SafariDriver();
-        }
+//        if(browser.equalsIgnoreCase("chrome")){
+//            WebDriverManager.chromedriver().setup();
+//            WebDriver driver = new ChromeDriver();
+//        } else if (browser.equals("firefox")) {
+//            WebDriverManager.firefoxdriver().setup();
+//            WebDriver driver = new FirefoxDriver();
+//        }else if (browser.equals("ie")) {
+//            WebDriverManager.iedriver().setup();
+//            WebDriver driver = new InternetExplorerDriver();
+//        }else if (browser.equals("edge")) {
+//            WebDriverManager.edgedriver().setup();
+//            WebDriver driver = new EdgeDriver();
+//        }else if (browser.equals("opera")) {
+//            WebDriverManager.operadriver().setup();
+////            WebDriver driver = new OperaDriver();
+//        }else if (browser.equals("safari")) {
+////            /usr/bin/safaridriver
+////            safaridriver --enable
+//            WebDriver driver = new SafariDriver();
+//        }
     }
 
     public void launchBrowserAfter4_5_x(String browser){
