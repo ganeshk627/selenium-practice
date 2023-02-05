@@ -74,6 +74,9 @@ public class LaunchBrowsers {
             case "chrome":
                 driver = new ChromeDriver();
                 break;
+            case "firefox":
+                driver = new FirefoxDriver();
+                break;
             case "ie":
                 driver = new InternetExplorerDriver();
                 break;
