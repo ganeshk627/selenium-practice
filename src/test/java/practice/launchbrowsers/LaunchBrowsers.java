@@ -69,7 +69,26 @@ public class LaunchBrowsers {
     }
 
     public void launchBrowserAfter4_5_x(String browser){
-
+        WebDriver driver;
+        switch (browser){
+            case "chrome":
+                driver = new ChromeDriver();
+                break;
+            case "ie":
+                driver = new InternetExplorerDriver();
+                break;
+            case "edge":
+                driver = new EdgeDriver();
+                break;
+            case "opera":
+                System.out.println("Opera Browser not available in recent versions!");
+                break;
+            case "safari":
+//            /usr/bin/safaridriver
+//            safaridriver --enable
+                driver = new SafariDriver();
+                break;
+        }
     }
 
 
@@ -77,8 +96,9 @@ public class LaunchBrowsers {
     public static void main(String [] args){
         String browser = "chrome";
         LaunchBrowsers launchBrowsers = new LaunchBrowsers();
-        launchBrowsers.launchBrowserBefore4_5_x(browser);
-
+//        launchBrowsers.launchBrowserBefore4_5_x(browser);
+//        launchBrowsers.launchBrowserWithWebdrivermanager(browser);
+//        launchBrowsers.launchBrowserAfter4_5_x(browser);
     }
 
 
