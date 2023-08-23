@@ -20,11 +20,15 @@ public class LocatorsStrategy {
     */
 
         // two methods to locate
-        driver.findElement(By.xpath("//input"));
+        WebElement username = driver.findElement(By.xpath("//input[@name='username']"));
+        username.sendKeys("Admin");
+//        username.clear();
+        username.click();
+
 //        driver.findElement(By.xpath("//input1"));
         List<WebElement> inputs1 = driver.findElements(By.xpath("//input"));
-        List<WebElement> inputs2 = driver.findElements(By.xpath("//input1"));
         System.out.println(inputs1.size());
+        List<WebElement> inputs2 = driver.findElements(By.xpath("//input1"));
         System.out.println(inputs2.size());
 
         // locator methods
