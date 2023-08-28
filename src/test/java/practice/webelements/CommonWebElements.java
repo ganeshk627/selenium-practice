@@ -45,7 +45,7 @@ public class CommonWebElements {
                 // upload - sendkeys(rel-path)
         driver.get("https://the-internet.herokuapp.com/upload");
         driver.findElement(By.id("file-upload"))
-                .sendKeys("/Users/ganeshk/Automation Testing/Automation Classes/Selenium Practice/Custom/upload-file.txt");
+                .sendKeys("/Users/ganeshk/Automation Testing/Automation Classes/Selenium Practice/Custom/src/test/java/practice/webelements/upload-file.txt");
 
 
 
