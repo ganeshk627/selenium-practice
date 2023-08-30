@@ -1,4 +1,4 @@
-package practice.webelements;
+package practice.webelements.mouseactions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,9 +17,16 @@ public class MouseActions {
         WebElement checkout_here = driver.findElement(By.xpath("//button[normalize-space()='Checkout here']"));
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(checkout_here).build().perform();
-        actions.contextClick(checkout_here).build().perform();
-        actions.click(checkout_here).contextClick(checkout_here).build().perform();
+//         single mouse action - .perform()
+//        actions.moveToElement(checkout_here).build().perform();
+//        actions.contextClick(checkout_here).perform();
+
+
+
+        // combined mouse action - .build().perform();
+        actions.moveToElement(checkout_here)
+                .click(checkout_here)
+                .build().perform();
 
 
 

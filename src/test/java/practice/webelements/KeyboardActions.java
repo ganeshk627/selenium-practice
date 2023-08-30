@@ -22,5 +22,17 @@ public class KeyboardActions {
         driver.findElement(By.id("demobox")).sendKeys(Keys.BACK_SPACE);
 
 
+        try {
+            Thread.sleep(2000);
+        } catch (Exception e){}
+
+        // multiple keys in single sendkeys()
+        driver.findElement(By.id("demobox"))
+                .sendKeys(Keys.chord(Keys.COMMAND, "a")); // mac
+//                .sendKeys(Keys.chord(Keys.CONTROL, "a")); // windows and linux
+        driver.findElement(By.id("demobox")).sendKeys(Keys.DELETE);
+
+
+
     }
 }
