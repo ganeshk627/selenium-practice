@@ -31,6 +31,11 @@ public class FirstLaunch {
         driver.manage().window().fullscreen();
         driver.manage().window().minimize();
 
+
+        // driver methods
+        System.out.println(driver.getCurrentUrl());;
+        System.out.println(driver.getTitle());;
+
 //        driver.quit();
         driver.close();
 
