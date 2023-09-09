@@ -12,10 +12,10 @@ import org.openqa.selenium.safari.SafariDriver;
 public class LaunchBrowsers {
      /*
      we don't need any drivers to be downloaded or webdrivermanager
-     if we are using selenium version 4.5.x or more
+     if we are using selenium version 4.6.x or more
      */
 
-    public void launchBrowserBefore4_5_x(String browser){
+    public void launchBrowserBefore4_6_x(String browser){
         if(browser.equalsIgnoreCase("chrome")){
 //            https://chromedriver.chromium.org
             System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
@@ -68,7 +68,7 @@ public class LaunchBrowsers {
 //        }
     }
 
-    public void launchBrowserAfter4_5_x(String browser){
+    public void launchBrowserAfter4_6_x(String browser){
         WebDriver driver;
         switch (browser){
             case "chrome":
@@ -99,9 +99,9 @@ public class LaunchBrowsers {
     public static void main(String [] args){
         String browser = "chrome";
         LaunchBrowsers launchBrowsers = new LaunchBrowsers();
-//        launchBrowsers.launchBrowserBefore4_5_x(browser);
+//        launchBrowsers.launchBrowserBefore4_6_x(browser);
 //        launchBrowsers.launchBrowserWithWebdrivermanager(browser);
-//        launchBrowsers.launchBrowserAfter4_5_x(browser);
+//        launchBrowsers.launchBrowserAfter4_6_x(browser);
     }
 
 
