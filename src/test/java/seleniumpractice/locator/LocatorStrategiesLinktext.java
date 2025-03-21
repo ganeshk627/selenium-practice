@@ -4,18 +4,25 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class LocatorStrategiesTagname {
+public class LocatorStrategiesLinktext {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         driver.get("https://selectorshub.com/xpath-practice-page/");
 
-//        driver.findElement(By.cssSelector("form[role='search'] div")).click();
+        String dlownadText = driver.findElement(By.linkText("DownLoad Link")).getText();
+        System.out.println(dlownadText);
 
-        // Locate by tagname
-        driver.findElement(By.tagName("input")).sendKeys("hello");
+        String downloadTag = driver.findElement(By.linkText("DownLoad Link")).getTagName();
+        System.out.println(downloadTag);
 
 
+        String chaneltext = driver.findElement(By.partialLinkText("Youtube Channel")).getText();
+        System.out.println(chaneltext);
 
-//        driver.quit();
+        String click_to_practice_text = driver.findElement(By.partialLinkText("Click to practice")).getText();
+        System.out.println(click_to_practice_text);
+
+
+        driver.quit();
     }
 }

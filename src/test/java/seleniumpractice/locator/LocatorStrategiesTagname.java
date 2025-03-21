@@ -4,18 +4,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class LocatorStrategiesName {
+public class LocatorStrategiesTagname {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         driver.get("https://selectorshub.com/xpath-practice-page/");
 
+//        driver.findElement(By.cssSelector("form[role='search'] div")).click();
 
-        // Locate by id
-        driver.findElement(By.name("company")).clear();
-        driver.findElement(By.name("company")).sendKeys("Fintekpoint");
+        // Locate by tagname
+        driver.findElement(By.tagName("input")).sendKeys("hello");
 
 
 
-        driver.quit();
+//        driver.quit();
     }
 }
