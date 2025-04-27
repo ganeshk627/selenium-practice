@@ -91,8 +91,8 @@ public class BasicWebElements {
         chooseCar.selectByVisibleText("Audi");
         BasicWebElements.waitFor(2);
         // Choose by contains visible text
-        chooseCar.selectByContainsVisibleText("Sa");
-        BasicWebElements.waitFor(2);
+//        chooseCar.selectByContainsVisibleText("Sa");
+//        BasicWebElements.waitFor(2);
         // Without using select class
         driver.findElement(By.cssSelector("select[name='cars']")).click();
         BasicWebElements.waitFor(1);

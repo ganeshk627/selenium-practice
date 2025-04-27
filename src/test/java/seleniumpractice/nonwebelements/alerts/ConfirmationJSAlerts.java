@@ -1,4 +1,4 @@
-package seleniumpractice.nonwebelements;
+package seleniumpractice.nonwebelements.alerts;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -8,20 +8,24 @@ import seleniumpractice.utils.WaitUtils;
 
 import java.time.Duration;
 
-public class PromptJSAlerts {
+public class ConfirmationJSAlerts {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 
-        driver.findElement(By.xpath("//button[normalize-space()='Click for JS Prompt']")).click();
+
+
+        driver.findElement(By.xpath("//button[normalize-space()='Click for JS Confirm']")).click();
         WaitUtils.waitFor(2);
         Alert alert = driver.switchTo().alert();
         System.out.println(alert.getText()); // printing the message
-        alert.sendKeys("hi!");
-        alert.accept();
+//        alert.accept();
+        alert.dismiss();
 
         WaitUtils.waitFor(5);
         driver.quit();
+
+
     }
 }
